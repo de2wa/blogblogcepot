@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ <head>
+
+   <META CONTENT='NOINDEX, NOFOLLOW' NAME='ROBOTS'/>
+
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+   <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css' rel='stylesheet'/>
+
+
+  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+  <b:if cond='data:blog.isMobile'>
+   <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+  <b:else/>
+   <meta content='width=1100' name='viewport'/>
+  </b:if>
+  <b:include data='blog' name='all-head-content'/>
+
+<b:if cond='data:blog.pageType == &quot;index&quot;'> 
+<title><data:blog.pageTitle/></title> 
+
+<b:else/>
+
+<title><data:blog.pageName/></title>
+
+
+
+</b:if>
+
+<!---->
+
+
+  <b:skin><![CDATA[
+   /*
+     body {  background: #fff; }
+   
+  ]]></b:skin>
+
+ </head>
+<style>
+      html body {width: 100%;height: 100%;padding: 0px;margin: 0px;overflow: hidden;font-family: arial;font-size: 10px;color: #6e6e6e;background-color: #000;} #preview-frame {width: 100%;background-color: #fff;}</style>
+      <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'/>
+      <script>
+         //function to fix height of iframe!
+         var calcHeight = function() {
+           //var headerDimensions = 0; //$(&#39;#header-bar&#39;).height();
+           $(&#39;#preview-frame&#39;).height($(window).height());
+         }
+         
+         $(document).ready(function() {
+           calcHeight();
+           /*$(&#39;#header-bar a.close&#39;).mouseover(function() {
+             $(&#39;#header-bar a.close&#39;).addClass(&#39;activated&#39;);
+           }).mouseout(function() {
+             $(&#39;#header-bar a.close&#39;).removeClass(&#39;activated&#39;);
+           });*/
+         }); 
+         
+         $(window).resize(function() {
+           calcHeight();
+         }).load(function() {
+           calcHeight();
+         });
+      </script>
+<body>
+<b:if cond='data:blog.pageType == &quot;index&quot;'> 
+  
+<script type='text/javascript'>
+function $_GET(param) {
+ var vars = {};
+ window.location.href.replace( location.hash, &#39;&#39; ).replace( 
+  /[?&amp;]+([^=&amp;]+)=?([^&amp;]*)?/gi, // regexp
+  function( m, key, value ) { // callback
+   vars[key] = value !== undefined ? value : &#39;&#39;;
+  }
+ );
+
+ if ( param ) {
+  return vars[param] ? vars[param] : null; 
+ }
+ return vars;
+}
+var ida = $_GET(&#39;id&#39;);
+document.write(&quot;<iframe frameborder='0' id='preview-frame' name='preview-frame' noresize='noresize' src='https://play.paidcpa.com/play.php?s=dewblog2&amp;movie=&quot;+ida+&quot;' style='height: 902px;'/>&quot;);
+      
+</script> 
+<!--<iframe frameborder="0" id="preview-frame" name="preview-frame" noresize="noresize" src="https://play.paidcpa.com/play.php?s=dewblog2&amp;movie='script'" style="height: 902px;"></iframe>-->
+</b:if>
+
+<b:if cond='data:blog.pageType == &quot;page&quot;'> 
+
+
+
+  <b:section class='main' id='main' showaddelement='yes'/>
+
+
+</b:if>
+
+  </body>
+</html>
