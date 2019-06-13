@@ -22,7 +22,11 @@
 		</div>
 <div id='content-home'>
            
- </div><footer/>
+ </div>
+	    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+<data:post.body/>
+</b:if>
+	    <footer/>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
       <script type='text/javascript'>
 
@@ -40,12 +44,13 @@ function $_GET(param) {
  }
  return vars;
 }
-
+var home_url =window.location.protocol + &#39;//&#39; + window.location.hostname;
+//document.write(home_url);
 var slug = $_GET(&#39;t&#39;);
 if(slug == null){
 $.ajax({
   type: &quot;GET&quot;,
-  url: &quot;https://cdnx.de2wa.com/asset/blog.js.php?theme=1&quot;,
+  url: &quot;//cdnx.de2wa.com/asset/blog.js.php?theme=3&amp;u=&quot; + home_url,
   dataType: &quot;script&quot;
 });
 } 
@@ -58,7 +63,7 @@ var slug2 = slug1.replace(&quot;/?&quot;,&quot;&quot;);
 
 $.ajax({
   type: &quot;GET&quot;,
-  url: &quot;https://cdnx.de2wa.com/asset/blog.js.php?theme=1&amp;slug=&quot; + slug2,
+  url: &quot;//cdnx.de2wa.com/asset/blog.js.php?theme=3&amp;slug=&quot; + slug2 + &quot;&amp;u=&quot;+ home_url ,
   dataType: &quot;script&quot;
 });
 }
