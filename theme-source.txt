@@ -78,5 +78,5 @@ if(gambar !== null) {
 document.getElementById(&quot;blog-wrapper&quot;).innerHTML = &quot;<div class='col-md-12 text-center'><p><a class='btn btn-outline-primary' download='image' href='&apos;+ gambar +&apos;'>Download Image</a></p><p><img alt='' class='img-fluid' src='&apos;+ gambar +&apos;'/></p></div>&quot;;
 
 }
-</script></body>
+</script><!--</body></html>--></body>
     </html>
