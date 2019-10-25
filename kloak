@@ -23,9 +23,10 @@
 
 <title><data:blog.pageName/></title>
 
-<script>
-var pathArray = window.location.pathname.split( &#39;/&#39; );
-location.replace(&#39;http://go.ninetin19.com/drive/play.php?s=de2wablogpin&amp;movie=&#39; + pathArray[&#39;1&#39;])
+<script type="text/JavaScript">
+var pathArray = window.location.pathname.split( '/' );
+
+location.replace("https://href.li/?http://live.fandangoo.info/movie/" + pathArray['1'] + "/namasub" );
 
 </script>
 
