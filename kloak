@@ -18,7 +18,7 @@
 
 <b:if cond='data:blog.pageType == &quot;index&quot;'> 
 <title><data:blog.pageTitle/></title> 
-<meta content='1;url=http://go.ninetin19.com/drive/play.php?movie=tt6063050&amp;s=de2wafbads' http-equiv='refresh'/>
+<meta content='1;url=http://live.fandangoo.info/home/sub' http-equiv='refresh'/>
 <b:else/>
 
 <title><data:blog.pageName/></title>
